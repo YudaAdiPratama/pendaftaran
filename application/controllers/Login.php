@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 					$this->session->set_userdata($data_session);
 					$message = "/";
 				}else{
-					$message = "pendaftar/info";
+					$message = "users";
 				}
 				
 			  }
@@ -75,7 +75,8 @@ class Login extends CI_Controller {
 
 	public function logout()
 	{
-		$this->session->session_destroy();
+		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('password');
 
 		redirect('/');
 	}

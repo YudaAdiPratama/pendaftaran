@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Anggota extends CI_Controller {
+class Users extends CI_Controller {
 
 	public function __construct(){
 
@@ -17,7 +17,7 @@ class Anggota extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'page' => 'pages/anggota/main',
+			'page' => 'pages/users/main',
 			'data' => $this->db->get("t_anggota")->result(),
 			
 		);
@@ -28,7 +28,7 @@ class Anggota extends CI_Controller {
 	public function form()
 	{
 		$data = array(
-			'page' => 'pages/anggota/form',
+			'page' => 'pages/users/form',
 		);
 		
 		$this->load->view('template', $data);
@@ -36,56 +36,56 @@ class Anggota extends CI_Controller {
 
 
 
-	public function save(){
+	// public function save(){
 
 
-		$data = array(
-			'nama' => $_POST['nama'],
-			'jk' => $_POST['jk'], 
-			'ktp' => $_POST['ktp'],
-			'telepon' => $_POST['telepon'],
-			'alamat' => $_POST['alamat'],
+	// 	$data = array(
+	// 		'nama' => $_POST['nama'],
+	// 		'jk' => $_POST['jk'], 
+	// 		'ktp' => $_POST['ktp'],
+	// 		'telepon' => $_POST['telepon'],
+	// 		'alamat' => $_POST['alamat'],
 			
-		);
-		$this->db->insert('t_anggota', $data);
-		redirect('/anggota');
+	// 	);
+	// 	$this->db->insert('t_anggota', $data);
+	// 	redirect('/anggota');
 			
 
 		
 
-	}
+	// }
 
-	public function form_update($id = null){
+	// public function form_update($id = null){
 
-		$data = array(
-			'page' => 'pages/anggota/form_update',
-			'category' => $this->db->get('t_category')->result(),
-			'data' => $this->db->where('id', $id)->get('t_anggota')->row()
-		);
+	// 	$data = array(
+	// 		'page' => 'pages/anggota/form_update',
+	// 		'category' => $this->db->get('t_category')->result(),
+	// 		'data' => $this->db->where('id', $id)->get('t_anggota')->row()
+	// 	);
 		
-		$this->load->view('template', $data);
+	// 	$this->load->view('template', $data);
 
 
-	}
+	// }
 
 
 	
-	public function update($id){
+	// public function update($id){
 
 		
-		$data = array(
-			'nama' => $_POST['nama'],
-			'jk' => $_POST['jk'], 
-			'ktp' => $_POST['ktp'],
-			'telepon' => $_POST['telepon'],
-			'alamat' => $_POST['alamat'],
+	// 	$data = array(
+	// 		'nama' => $_POST['nama'],
+	// 		'jk' => $_POST['jk'], 
+	// 		'ktp' => $_POST['ktp'],
+	// 		'telepon' => $_POST['telepon'],
+	// 		'alamat' => $_POST['alamat'],
 			
-		);
-		$this->db->set($data)->where('id', $id)->update('t_anggota');
-		redirect('/anggota');
+	// 	);
+	// 	$this->db->set($data)->where('id', $id)->update('t_anggota');
+	// 	redirect('/anggota');
     
 
-	}
+	// }
 
 
 
@@ -100,14 +100,14 @@ class Anggota extends CI_Controller {
 			
 	}
 
-	public function delete(){
+	// public function delete(){
 
-		$id = $_POST['id'];
+	// 	$id = $_POST['id'];
 
-		$this->db->where('id', $id)->delete('t_anggota');
-		redirect('/anggota');
+	// 	$this->db->where('id', $id)->delete('t_anggota');
+	// 	redirect('/anggota');
 			
-	}
+	// }
 	
 	
 	

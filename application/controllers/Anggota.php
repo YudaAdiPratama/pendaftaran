@@ -136,10 +136,10 @@ class Anggota extends CI_Controller {
 
 
 
+	
+	public function delete($id){
 
-	public function delete(){
-
-		$id = $_POST['id'];
+		// $id = $_POST['id'];
 
 		$this->db->where('id', $id)->delete('t_pendaftar');
 		redirect('/anggota');
