@@ -102,7 +102,7 @@
           </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                  <button type="submit" class="btn btn-default">Save</button>
+                  <button type="submit" class="btn btn-default">Save and Verified</button>
                 
                 </div>
 

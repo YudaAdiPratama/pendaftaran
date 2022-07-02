@@ -65,7 +65,7 @@ Register
 </div>
 
 <div class="wrap-input100 validate-input" data-validate = "Enter Asal sekolah required" >
-<input class="input100" type="text" placeholder="Asal sekolah" name="asal_sekolah">
+<input class="input100" type="text" placeholder="Asal sekolah" name="sekolah">
 </div>
 
 <div class="wrap-input100 validate-input" data-validate = "Jurusan yang di pilih required" >
@@ -81,6 +81,7 @@ Register
 <div class="wrap-input100 validate-input" data-validate="Alamat is required">
 <input class="input100" placeholder="alamat" name="alamat">
 </div>
+
 
 <div class="wrap-input100 validate-input" data-validate="No HP is required">
 <input class="input100" placeholder="No Hp" name="no_hp">
